@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-material-crud-forms';
+  title = 'Angular Material CRUD Forms';
+
+    menu: Array<object> = [
+        { name: 'Profile', url: 'https://www.linkedin.com/in/rajankathi/' },
+        { name: 'Github', url: 'https://github.com/rjankathi/Angular-Material-Crud-App' },
+        { name: 'About me', url: 'https://github.com/rjankathi' }
+    ];
 }

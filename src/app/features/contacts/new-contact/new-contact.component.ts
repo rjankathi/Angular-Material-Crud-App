@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoggerService } from 'core';
-import { ContactService } from '@app/features/contact/shared/contact.service';
-import { Contact } from '@app/features/contact/shared/contact';
+import { ContactService } from '../shared/contact.service';
+import { Contact } from '../shared/contact';
 
 @Component({
   selector: 'app-new-contact',

@@ -1,10 +1,10 @@
 import { LoggerService } from '../../../../core/logger/logger.service';
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { MatTableDataSource, MatPaginator, MatSort, MatDialog, MatDialogConfig } from '@angular/material';
-import { ContactService } from '@app/features/contact/shared/contact.service';
-import { Contact } from '@app/features/contact/shared/contact';
 import { ConfirmedDialogComponent } from '@app/shared';
 import { ContactDetailComponent } from '../contact-detail/contact-detail.component';
+import { ContactService } from '../shared/contact.service';
+import { Contact } from '../shared/contact';
 
 @Component({
   selector: 'app-contact-list',

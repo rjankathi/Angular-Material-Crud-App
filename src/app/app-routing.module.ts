@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   // 1st route
-  {path: '', loadChildren: './features/contactc/contacts.module#ContactsModule'}
+  { path: '', loadChildren: './features/contacts/contacts.module#ContactsModule' }
 ];
 
 @NgModule({
