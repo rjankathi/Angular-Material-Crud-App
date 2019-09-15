@@ -8,7 +8,7 @@ export class ToastService {
 
   constructor(public snackBar: MatSnackBar) { }
 
-  openSanckBar(message: string, action: string) {
+  openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
       duration : 2000
     });
