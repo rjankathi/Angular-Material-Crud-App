@@ -25,7 +25,20 @@ export class ContactService {
               private logger: LoggerService,
               private toastService: ToastService) { }
 
-// GET: get an existing contact from the database by an id 
+    /**
+     * GET: get all contacts from the database
+     */
+    getContacts(): Observable<any> {
+        this.logger.log(this.contactsUrl);
+        return this.http
+            .get<Contact[]>(this.contactsUrl)
+            .pipe(
+                tap(_ => this.notify('fetched contacts', 'GET')),
+                catchError(this.handleError('getContacts', 'GET'))
+            );
+    }
+
+// GET: get an existing contact from the database by an id
     getContact(id: number): Observable<any> {
       const url = `${this.contactsUrl}/${id}`;
       return this.http
