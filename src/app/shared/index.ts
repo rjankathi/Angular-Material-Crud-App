@@ -1,0 +1,1 @@
+export { ConfirmedDialogComponent } from './dialogs/confirmed-dialog/confirmed-dialog.component';
