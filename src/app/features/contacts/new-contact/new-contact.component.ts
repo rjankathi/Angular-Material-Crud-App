@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoggerService } from 'core';
 import { ContactService } from '../shared/contact.service';
@@ -27,12 +27,20 @@ export class NewContactComponent implements OnInit {
       this.buildAddressForm();
   }
 
-  buildPersonalForm(): void {
-    this.personalForm = this.formBuilder.group({
-        firstName: ['', Validators.required],
-        lastName: ['', Validators.required],
-        email: ['', [Validators.required, Validators.email] ]
-    });
+//   buildPersonalForm(): void {
+//     this.personalForm = this.formBuilder.group({
+//         firstName: ['', Validators.required],
+//         lastName: ['', Validators.required],
+//         email: ['', [Validators.required, Validators.email] ]
+//     });
+//   }
+
+buildPersonalForm(): void {
+      this.personalForm = new FormGroup({
+          firstName : new FormControl(),
+          lastName: new FormControl(),
+          email: new FormControl()
+      });
   }
 
   buildWorkForm(): void {
